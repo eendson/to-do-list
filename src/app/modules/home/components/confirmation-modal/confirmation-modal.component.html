@@ -1,0 +1,10 @@
+<div class="modal-container" [ngClass]="{'show': showModal}">
+    <div class="modal">
+      <p>Tem certeza de que deseja excluir todas as tarefas da lista?</p>
+      <div class="button-container">
+        <button id="cancel" (click)="cancel()">Cancelar</button>
+        <button id="confirm" (click)="confirm()">Confirmar</button>
+      </div>
+    </div>
+</div>
+  
