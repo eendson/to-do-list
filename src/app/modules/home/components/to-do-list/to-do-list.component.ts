@@ -43,7 +43,7 @@ export class ToDoListComponent implements DoCheck{
   public setLocalStorage() {
 
     if(this.taskList) {
-      this.taskList.sort(()=> (this.taskList[0].checked ? -1 : 1));
+      this.taskList.sort((first, last)=> Number(first.checked) - Number(last.checked));
       localStorage.setItem('List', JSON.stringify(this.taskList));
     }
 
